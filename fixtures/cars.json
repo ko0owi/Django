@@ -1,0 +1,148 @@
+[
+{
+    "model": "cars.car",
+    "pk": 1,
+    "fields": {
+        "brand": "Volkswagen",
+        "model": "Jetta",
+        "image": "cars/volkswagen-jetta.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "engine_type": "diesel",
+        "engine_capacity": 1900,
+        "engine_power": 120,
+        "transmission_type": "manual",
+        "seats_no": 4,
+        "luggage_compartment": 2,
+        "is_available": true,
+        "category": 1,
+        "added": "2023-01-19T20:52:45.496Z",
+        "features": [
+            1,
+            2,
+            5
+        ]
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 2,
+    "fields": {
+        "brand": "Chevrolet",
+        "model": "Spark",
+        "image": "cars/chevrolet-spark.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "engine_type": "petrol",
+        "engine_capacity": 1200,
+        "engine_power": 90,
+        "transmission_type": "manual",
+        "seats_no": 4,
+        "luggage_compartment": 2,
+        "is_available": false,
+        "category": 2,
+        "added": "2023-01-19T21:08:06.306Z",
+        "features": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 3,
+    "fields": {
+        "brand": "Chevrolet",
+        "model": "Impala",
+        "image": "cars/chevrolet-impala.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "engine_type": "diesel",
+        "engine_capacity": 2500,
+        "engine_power": 250,
+        "transmission_type": "manual",
+        "seats_no": 5,
+        "luggage_compartment": 4,
+        "is_available": true,
+        "category": 3,
+        "added": "2023-01-21T16:25:06.216Z",
+        "features": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 4,
+    "fields": {
+        "brand": "Nissan",
+        "model": "Versa",
+        "image": "cars/nissan-versa.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "engine_type": "petrol",
+        "engine_capacity": 1500,
+        "engine_power": 150,
+        "transmission_type": "manual",
+        "seats_no": 5,
+        "luggage_compartment": 3,
+        "is_available": true,
+        "category": 1,
+        "added": "2023-01-23T11:07:37.643Z",
+        "features": [
+            3,
+            5
+        ]
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 5,
+    "fields": {
+        "brand": "Nissan",
+        "model": "Maxima",
+        "image": "cars/nissan-maxima.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "engine_type": "petrol",
+        "engine_capacity": 2200,
+        "engine_power": 180,
+        "transmission_type": "manual",
+        "seats_no": 5,
+        "luggage_compartment": 5,
+        "is_available": true,
+        "category": 3,
+        "added": "2023-01-23T11:08:39.767Z",
+        "features": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 6,
+    "fields": {
+        "brand": "Kia",
+        "model": "Forte",
+        "image": "cars/kia-forte.webp",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "engine_type": "petrol",
+        "engine_capacity": 1400,
+        "engine_power": 160,
+        "transmission_type": "manual",
+        "seats_no": 4,
+        "luggage_compartment": 3,
+        "is_available": true,
+        "category": 2,
+        "added": "2023-01-28T08:55:12.723Z",
+        "features": [
+            1,
+            2
+        ]
+    }
+}
+]

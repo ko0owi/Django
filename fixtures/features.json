@@ -1,0 +1,37 @@
+[
+{
+    "model": "cars.feature",
+    "pk": 1,
+    "fields": {
+        "feature": "AC"
+    }
+},
+{
+    "model": "cars.feature",
+    "pk": 2,
+    "fields": {
+        "feature": "radio"
+    }
+},
+{
+    "model": "cars.feature",
+    "pk": 3,
+    "fields": {
+        "feature": "bluetooth"
+    }
+},
+{
+    "model": "cars.feature",
+    "pk": 4,
+    "fields": {
+        "feature": "cruise control"
+    }
+},
+{
+    "model": "cars.feature",
+    "pk": 5,
+    "fields": {
+        "feature": "leather seats"
+    }
+}
+]

@@ -1,0 +1,23 @@
+[
+{
+    "model": "cars.category",
+    "pk": 1,
+    "fields": {
+        "category": "standard"
+    }
+},
+{
+    "model": "cars.category",
+    "pk": 2,
+    "fields": {
+        "category": "economy"
+    }
+},
+{
+    "model": "cars.category",
+    "pk": 3,
+    "fields": {
+        "category": "luxury"
+    }
+}
+]
