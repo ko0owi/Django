@@ -1,0 +1,26 @@
+<h2 class="title is-2">Ask for availability, {{ request.user }} </h2>
+<p class="is-size-4"></p>
+<p>Chosen car : {{ car.brand }} {{ car.model }}</p>
+
+<form class="form" method="POST">
+ {% csrf_token %}
+
+    <p class="title is-3">Add pick-up and return dates</p>
+
+    <p>
+        <label for="start">Pick-up date:</label>
+        <input class="input" type="date" id="start" name="start" min="" max="">
+    </p>
+
+    <p>
+         <label for="start">Return date:</label>
+         <input class="input" type="date" id="stop" name="stop" min="" max="">
+    </p>
+    <p>
+        <label for="phone">Enter your phone number:</label>
+        <input class="input" type="tel" id="phone" name="phone" pattern="[0-9]+">
+    </p>
+      <input class="button is-primary" type="submit" value="Send request">
+
+</form>
+

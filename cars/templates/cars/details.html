@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    {% include "head.html" %}
+{% endblock %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <section class="hero hero-subsite is-link">
+      <div class="hero-body has-text-centered">
+        <p class="title">
+          Our fleet
+        </p>
+        <p class="subtitle">
+          subtitle
+        </p>
+      </div>
+    </section>
+
+    <section class="section is-medium">
+
+            <div class="container">
+                <div class="columns">
+
+                        <div class="column is-three-fifths">
+                            <p class="is-size-7">or similar</p>
+                            <h2 class="title is-2">{{ car.brand }} {{ car.model }}</h2>
+                            <p class="is-size-4">{{ car.category }}</p>
+                            <p>{{ car.description }}</p>
+                            <hr>
+
+                            <div class="columns">
+                                <div class="column">
+                                    <h3 class="title is-3">Details</h3>
+                                    <span class="material-symbols-outlined">settings_suggest</span>
+                                    Transmission: {{ car.transmission_type }}<br>
+                                    <span class="material-symbols-outlined">groups</span>
+                                    Number of seats: {{ car.seats_no  }} seats<br>
+                                    <span class="material-symbols-outlined">cases</span>
+                                    Bags in cargo: {{ car.luggage_compartment }} pieces of luggage<br>
+                                    <span class="material-symbols-outlined">speed</span>
+                                    Engine power: {{ car.engine_power }} HP<br>
+                                    <span class="material-symbols-outlined">oil_barrel</span>
+                                    Engine capacity: {{ car.engine_capacity }} cm<sup>3</sup>
+                                </div>
+                                <div class="column">
+                                    <h3 class="title is-3">Features</h3>
+                                    <ul>
+                                    {% for feature in car.features.all %}
+                                        <li>{{ feature }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            {% if car.image %}
+                            <figure class="image is-4by3">
+                                <img src="{{MEDIA_URL}}{{ car.image }}" alt="car image">
+                            </figure>
+                            {% else %}
+                            <figure class="image is-4by3">
+                                <img src="{% static 'img/placeholder.png' %}" alt="car image">
+                            </figure>
+                            {% endif %}
+                        </div>
+
+                </div>
+
+                <div class="columns">
+
+                        <div class="column">
+                            {% if user.is_authenticated %}
+                                {% include 'cars/rent_form.html' %}
+                            {% else %}
+                                <a class="navbar-item button is-primary" href="{% url 'website:login' %}">Ask for availability</a>
+                            {% endif %}
+                        </div>
+
+                </div>
+            </div>
+
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

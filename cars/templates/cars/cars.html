@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    {% include "head.html" %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cars/css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <section class="hero hero-subsite is-link">
+      <div class="hero-body has-text-centered">
+        <p class="title">
+          Our fleet
+        </p>
+        <p class="subtitle">
+          subtitle
+        </p>
+      </div>
+    </section>
+
+    <section class="section is-medium">
+
+        <div class="container fleet-list">
+            <div class="columns is-multiline">
+
+                {% if cars %}
+                {% for car in cars %}
+                <!-- START CAR PROFILE -->
+                    <div class="column is-4 category-{{ car.category }}">
+
+                        <div class="card large">
+                        <a href="{% url 'cars:details' car.id %}">
+                          <header class="card-car-category category-{{ car.category }}">
+                            <p class="title is-5 has-text-centered">
+                              {{ car.category }}
+                            </p>
+                          </header>
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                                {% if car.image %}
+                                <img src="{{MEDIA_URL}}{{ car.image }}" alt="car image">
+                                {% else %}
+                                <img src="{% static 'img/placeholder.png' %}" alt="car image">
+                                {% endif %}
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                    <p class="title is-4 no-padding">{{ car.brand }} {{ car.model }} <span class="is-size-7">or similar</span>
+                                        {% if not car.is_available %}
+                                        <span class="tag is-danger availability">Unavailable</span>
+                                        {% endif %}
+                                  </p>
+                              </div>
+                            </div>
+                            <div class="content">
+                                <span class="tag is-light rounded"><span class="material-symbols-outlined">settings_suggest</span> {{ car.transmission_type }}</span>
+                                <span class="tag is-light rounded"><span class="material-symbols-outlined">groups</span> {{ car.seats_no }} people</span>
+                                <span class="tag is-light rounded"><span class="material-symbols-outlined">cases</span> {{ car.luggage_compartment }} bags</span>
+                            </div>
+                          </div>
+                        </a>
+                        </div>
+
+                    </div>
+                <!-- END CAR PROFILE -->
+                {% endfor %}
+                {% else %}
+                    <div class="column has-text-centered">
+                        <h2 class="title is-4">No cars are currently available</h2>
+                        <p>We are sorry for any inconveniences</p>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

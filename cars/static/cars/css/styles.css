@@ -1,0 +1,25 @@
+.fleet-list .card:hover {
+    transition: .5s all ease-out;
+    transform: translateY(-5px);
+}
+
+header.card-car-category {
+    padding: .25em 0 .5em;
+    background-color: #efefef;
+}
+
+header.card-car-category.category-standard p {
+    color: #5e90f1;
+}
+
+header.card-car-category.category-economy p {
+    color: #549954;
+}
+
+header.card-car-category.category-luxury p {
+    color: #ecb228;
+}
+
+span.availability {
+    float: right;
+}
