@@ -1,0 +1,39 @@
+
+.logo {
+    width: 50px;
+    padding-top: 5px;
+}
+
+.homepage-hero {
+    background-color: #cccccc;
+    background-image: url("/static/img/main-banner.jpg");
+}
+
+@media screen and (max-width: 769px) {
+    .hero.is-medium .hero-body {
+        padding: 6rem 4.5rem;
+    }
+}
+
+
+.hero .hero-h1,
+.hero .hero-tagline {
+   width:50%;
+}
+
+.hero.hero-subsite {
+    padding-top: 60px;
+}
+
+.material-symbols-outlined {
+    font-weight: 300;
+    color: #a99999;
+    font-size: 100%;
+}
+
+@media screen and (max-width: 769px) {
+    .hero .hero-h1,
+    .hero .hero-tagline {
+       width:100%;
+    }
+}

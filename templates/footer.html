@@ -1,0 +1,69 @@
+{% load static %}
+<footer class="footer footer-light">
+
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="footer-logo">
+                    <img class="logo" src="{% static 'img/logo-carrent.png' %}" alt="logo">
+                    <p>{{ company_description }}</p>
+                    <p>{{ company_phone }}</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-column">
+                    <div class="footer-header">
+                        <h3>The company</h3>
+                    </div>
+                    <ul class="link-list">
+                        <li><a href="{% url 'website:homepage' %}">Homepage</a></li>
+                        <li><a href="{% url 'website:privacy' %}">Privacy policy</a></li>
+                        <li><a href="{% url 'website:terms' %}">Terms and conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-column">
+                    <div class="footer-header">
+                        <h3>Vehicles</h3>
+                    </div>
+                    <ul class="link-list">
+                        <li><a href="#">Rent a car</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-column">
+                    <div class="footer-header">
+                        <h3>Customer service</h3>
+                    </div>
+                    <ul class="link-list">
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-column">
+                   <div class="footer-header">
+                        <h3>Follow us</h3>
+                    </div>
+                    <ul class="link-list">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column has-text-left">
+                    <p>© {% now "Y" %}</p>
+                </div>
+                <div class="column has-text-right">
+                    <p><a class="has-text-grey-light" href="https://bulma.io" rel="noreferrer" target="_blank">
+                                Made with Bulma
+                            </a></p>
+                </div>
+            </div>
+        </div>
+
+</footer>

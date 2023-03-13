@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    {% include "head.html" %}
+{% endblock %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <section class="hero is-medium is-link">
+      <div class="hero-body has-text-centered">
+        <h1 class="title">
+          404 Page not found
+        </h1>
+        <p class="subtitle">
+          We are sorry, the requested page couldn't be found
+        </p>
+      </div>
+    </section>
+
+    <section class="section is-medium">
+
+            <div class="container">
+                <div class="columns features">
+                    <div class="column">
+                        <div class="content has-text-centered is-size-3">
+                          Return to the <a href="{% url 'website:homepage' %}">homepage</a> or search for a <a href="{% url 'cars:fleet' %}">car to rent</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

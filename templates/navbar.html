@@ -1,0 +1,35 @@
+{% load static %}
+{% include 'includes/messages.html' %}
+<nav class="navbar signal-navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="#">
+                <img class="logo" src="{% static '/img/logo-carrent.png' %}" alt="logo">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="signalNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="signalNavbar" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="{% url 'website:homepage' %}">Homepage</a>
+                <a class="navbar-item" href="{% url 'cars:fleet' %}">Fleet</a>
+                <a class="navbar-item" href="{% url 'website:contact' %}">Contact</a>
+                {% if user.is_authenticated %}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Welcome, {{user.username}}</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/logout">Logout</a>
+                        </div>
+                </div>
+                {% else %}
+                <div class="navbar-item">
+                    <a class="navbar-item button is-primary" href="{% url 'website:login' %}">Login</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>
